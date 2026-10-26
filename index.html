@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jazmín Fuentes — Frontend Developer & UI/UX Designer</title>
+<meta name="description" content="Diseño en Figma e implementación frontend. Frontend Developer & UI/UX Designer en Panamá.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#17132b;--paper:#f4f3f9;--card:#fff;--line:#d9d6e8;--violet:#6a3df0;--mint:#bff0da;--mute:#5a5675;--r:14px;
+--d:"Bricolage Grotesque","Trebuchet MS",sans-serif;--b:"Instrument Sans","Segoe UI",system-ui,sans-serif}
+@media(prefers-color-scheme:dark){:root{--ink:#f1effb;--paper:#121022;--card:#1b1833;--line:#322e55;--violet:#a58bff;--mint:#1f5a47;--mute:#a9a5c8}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.05rem/1.6 var(--b)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important}}
+a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid var(--violet);outline-offset:3px}
+html[lang=es] [lang=en],html[lang=en] [lang=es]{display:none!important}
+.w{max-width:1120px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .w{display:flex;align-items:center;gap:18px;height:60px}
+.logo{font:800 1.15rem var(--d);text-decoration:none;margin-right:auto}
+nav{display:flex;gap:18px;font-size:.95rem}nav a{text-decoration:none;color:var(--mute)}nav a:hover{color:var(--ink)}
+.lt{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:5px 13px;font:600 .85rem var(--b);cursor:pointer}
+h1,h2,h3{font-family:var(--d);line-height:1.05;margin:0}
+h1{font-size:clamp(2.6rem,7vw,5.4rem);font-weight:800;letter-spacing:-.03em;max-width:13ch}
+h2{font-size:clamp(1.9rem,4vw,3rem);font-weight:700;letter-spacing:-.02em;margin-bottom:22px}
+h3{font-size:1.35rem;font-weight:700}
+section{padding:80px 0}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;padding:64px 0 80px}
+.hero p{max-width:46ch;color:var(--mute);font-size:1.15rem;margin:22px 0 28px}
+.btn{display:inline-block;padding:12px 22px;border-radius:99px;background:var(--violet);color:#fff;font-weight:600;text-decoration:none;margin-right:10px}
+@media(prefers-color-scheme:dark){.btn{color:#121022}}
+.btn.o{background:none;color:var(--ink);border:1.5px solid var(--ink)}
+/* signature: figma-style selected frame */
+.frame{position:relative;border:2px solid var(--violet);border-radius:4px;padding:0;background:var(--card);animation:in .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes in{from{opacity:0;transform:translateY(14px) scale(.98)}}
+.frame img{display:block;width:100%;height:auto}
+.frame i{position:absolute;width:10px;height:10px;background:#fff;border:2px solid var(--violet)}
+.frame i:nth-of-type(1){left:-7px;top:-7px}.frame i:nth-of-type(2){right:-7px;top:-7px}.frame i:nth-of-type(3){left:-7px;bottom:-7px}.frame i:nth-of-type(4){right:-7px;bottom:-7px}
+.tag{position:absolute;font:600 .75rem var(--b);padding:3px 9px;border-radius:0 8px 8px 8px;color:#fff;white-space:nowrap}
+.t1{top:-30px;left:-2px;background:var(--violet)}.t2{bottom:-30px;right:-2px;background:#0f7a5a;border-radius:8px 0 8px 8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0;padding:0;list-style:none}
+.chips li{font-size:.82rem;font-weight:600;padding:3px 11px;border-radius:99px;background:var(--mint);color:#0d3b2d}
+@media(prefers-color-scheme:dark){.chips li{color:#d6fff0}}
+.cap{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.cap div{border-top:3px solid var(--violet);padding-top:14px}.cap p{color:var(--mute);margin:8px 0 0}
+.case{background:var(--ink);color:var(--paper);border-radius:22px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+@media(prefers-color-scheme:dark){.case{background:var(--card);color:var(--ink)}}
+.case .chips li{background:rgba(255,255,255,.14);color:inherit}
+.ph{aspect-ratio:16/10;border:2px dashed var(--violet);border-radius:10px;display:grid;place-items:center;text-align:center;padding:20px;font-size:.92rem;opacity:.9}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:30px 0 0;padding:0;list-style:none;counter-reset:s}
+.flow li{counter-increment:s;padding:16px 16px 0 0;border-top:2px solid var(--violet);font-size:.95rem}
+.flow li::before{content:counter(s);display:block;font:700 1.5rem var(--d);color:var(--violet)}
+.case a.l{margin-right:14px;font-weight:600}
+.proj{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center;padding:36px 0;border-top:1px solid var(--line)}
+.proj:nth-child(even) .m{order:2}
+.m img,.m video{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);display:block}
+.m .row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.proj p{color:var(--mute)}.proj .n{font-size:.9rem}
+.more{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.more article{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.more img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;border-radius:8px}
+.tl{display:grid;grid-template-columns:1fr 1fr;gap:40px}.tl h3{margin:18px 0 4px}.tl p{margin:0;color:var(--mute)}
+footer{padding:80px 0 40px;border-top:1px solid var(--line)}
+footer .big{font:800 clamp(1.8rem,5vw,3.6rem) var(--d);letter-spacing:-.02em;word-break:break-word}
+footer small{display:block;margin-top:40px;color:var(--mute)}
+@media(max-width:820px){nav{display:none}.hero,.case,.proj,.tl,.more,.cap{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.proj:nth-child(even) .m{order:0}.case{padding:26px}.hero{padding-top:44px}}
+.lab{font:600 .9rem var(--b);color:var(--violet);margin:0 0 10px}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:.88rem;font-weight:600;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:5px 14px;margin-bottom:22px}
+.badge::before{content:"";width:9px;height:9px;border-radius:50%;background:#1faa78;box-shadow:0 0 0 4px rgba(31,170,120,.2)}
+.ab{display:grid;grid-template-columns:1.4fr 1fr;gap:48px}.ab p{max-width:62ch;margin:0 0 16px}
+.facts{margin:0;padding:22px;border:1px solid var(--line);border-radius:var(--r);background:var(--card);align-self:start}
+.facts dt{font-weight:700;font-size:.9rem;color:var(--mute)}.facts dd{margin:0 0 14px}.facts dd:last-child{margin:0}
+.nb{padding:7px 16px;font-size:.88rem;margin:0}
+.ct{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.mail{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:6px 0 24px}.mail a{font:700 1.2rem var(--d)}
+.box{border:1px solid var(--line);background:var(--card);border-radius:var(--r);padding:18px 20px}.box ul{margin:8px 0 0;padding-left:18px;color:var(--mute)}
+form{display:grid;gap:14px}label{font-weight:600;font-size:.92rem;display:grid;gap:6px}
+input,textarea{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 13px}
+.fg{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}.fg h3{font-size:1rem;margin-bottom:12px}.fg ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}.fg p{color:var(--mute);max-width:34ch;margin:8px 0 0}
+.fb{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-top:44px;padding-top:20px;border-top:1px solid var(--line);color:var(--mute);font-size:.9rem}
+@media(max-width:820px){.ab,.ct,.fg{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="w"><a class="logo" href="#top">Jazmín Fuentes</a>
+<nav><a href="#sobre-mi"><span lang="es">Sobre mí</span><span lang="en">About</span></a><a href="#escuela"><span lang="es">Caso principal</span><span lang="en">Main case</span></a><a href="#proyectos"><span lang="es">Proyectos</span><span lang="en">Projects</span></a><a href="#trayectoria"><span lang="es">Trayectoria</span><span lang="en">Background</span></a><a href="#contacto"><span lang="es">Contacto</span><span lang="en">Contact</span></a></nav>
+<a class="btn nb" id="cvh" href="cv/CV_JazminFuentes_es.pdf" download><span lang="es">Descargar CV</span><span lang="en">Download CV</span></a>
+<button class="lt" id="lt" aria-label="Cambiar idioma / Switch language">EN</button></div></header>
+
+<main id="top">
+<div class="w hero">
+<div>
+<span class="badge"><span lang="es">Disponible para colaborar</span><span lang="en">Available to collaborate</span></span><br><h1><span lang="es">Del frame de Figma a la interfaz en el navegador.</span><span lang="en">From the Figma frame to the interface in the browser.</span></h1>
+<p><span lang="es">Soy Jazmín, diseñadora UI/UX y desarrolladora frontend en Panamá. Diseño la experiencia y la programo, así lo que se diseña es lo que se publica.</span><span lang="en">I'm Jazmín, a UI/UX designer and frontend developer in Panama. I design the experience and build it, so what gets designed is what ships.</span></p>
+<a class="btn" href="#escuela"><span lang="es">Ver caso principal</span><span lang="en">See main case</span></a><a class="btn o" href="#contacto"><span lang="es">Escríbeme</span><span lang="en">Get in touch</span></a>
+</div>
+<div class="frame" style="margin:30px 8px"><i></i><i></i><i></i><i></i><span class="tag t1">Jazmín · UI/UX</span><span class="tag t2">Jazmín · Frontend</span>
+<img src="img/alegator-home_page_examples.webp" alt="Pantalla de inicio de Alegator, plataforma de torneos de debate" width="1440" height="1024"></div>
+</div>
+
+<section id="sobre-mi" style="padding-top:0"><div class="w ab">
+<div><p class="lab">01 / <span lang="es">Sobre mí</span><span lang="en">About</span></p><h2><span lang="es">Diseño y código, en la misma conversación</span><span lang="en">Design and code, in the same conversation</span></h2>
+<p><span lang="es">Soy desarrolladora frontend y diseñadora UX/UI, y estudio Desarrollo de Software en la Universidad Tecnológica de Panamá. Me especializo en JavaScript, TypeScript y CSS moderno, con wireframes, prototipos y sistemas de diseño en Figma.</span><span lang="en">I'm a frontend developer and UX/UI designer, studying Software Development at Universidad Tecnológica de Panamá. I specialize in JavaScript, TypeScript and modern CSS, with wireframes, prototypes and design systems in Figma.</span></p>
+<p><span lang="es">Me interesa que lo diseñado y lo publicado se parezcan. Por eso participo en las dos etapas: pensar la experiencia y programarla.</span><span lang="en">I care that what is designed and what is published look alike. That's why I take part in both stages: shaping the experience and building it.</span></p></div>
+<dl class="facts"><dt><span lang="es">Ubicación</span><span lang="en">Location</span></dt><dd>Panamá</dd><dt><span lang="es">Idiomas</span><span lang="en">Languages</span></dt><dd><span lang="es">Español e inglés</span><span lang="en">Spanish and English</span></dd><dt><span lang="es">Disponibilidad</span><span lang="en">Availability</span></dt><dd><span lang="es">Abierta a reubicación</span><span lang="en">Open to relocation</span></dd></dl>
+</div></section>
+<section style="padding-top:0"><div class="w cap">
+<div><h3><span lang="es">Diseño en Figma</span><span lang="en">Design in Figma</span></h3><p><span lang="es">Wireframes, prototipos de alta fidelidad y sistemas de diseño con componentes reutilizables.</span><span lang="en">Wireframes, high-fidelity prototypes and design systems with reusable components.</span></p></div>
+<div><h3><span lang="es">Frontend responsive</span><span lang="en">Responsive frontend</span></h3><p><span lang="es">HTML, CSS, JavaScript y TypeScript; React/Next.js y Tailwind en los proyectos que los usaron.</span><span lang="en">HTML, CSS, JavaScript and TypeScript; React/Next.js and Tailwind on the projects that used them.</span></p></div>
+<div><h3><span lang="es">Colaboración</span><span lang="en">Collaboration</span></h3><p><span lang="es">Trabajo con diseños existentes o parto desde cero, con Git y GitHub. Español e inglés.</span><span lang="en">I work from existing designs or from scratch, with Git and GitHub. Spanish and English.</span></p></div>
+</div></section>
+
+<section id="escuela"><div class="w">
+<p class="lab">02 / <span lang="es">Caso principal</span><span lang="en">Main case</span></p>
+<div class="case">
+<div>
+<h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem)"><span lang="es">Sitio web de la Escuela Primaria Octavio López Pascal</span><span lang="en">Website for Octavio López Pascal Primary School</span></h2>
+<p><span lang="es">Diseñé el prototipo en Figma y programé el frontend del sitio de la escuela. Es el caso donde se ve todo el recorrido: de la jerarquía de pantallas al sitio publicado.</span><span lang="en">I designed the Figma prototype and built the school website's frontend. This case shows the full path, from screen hierarchy to the published site.</span></p>
+<ul class="chips"><li>Figma</li><li>HTML5</li><li>Tailwind CSS</li><li>JavaScript</li><li>Font Awesome</li></ul>
+<p><strong><span lang="es">Rol:</span><span lang="en">Role:</span></strong> <span lang="es">diseño UI/UX en Figma y desarrollo frontend.</span><span lang="en">UI/UX design in Figma and frontend development.</span></p>
+<p><a class="l" href="https://jazjv04.github.io/website_escuela_olp/" target="_blank" rel="noopener"><span lang="es">Ver sitio publicado</span><span lang="en">Visit live site</span></a>
+<a class="l" href="https://www.figma.com/design/HVAYWqLQcKYenOK7M6jEIe/OLP--Web?node-id=0-1&t=mLqVG5rJi78orlnx-1" target="_blank" rel="noopener"><span lang="es">Prototipo en Figma</span><span lang="en">Figma prototype</span></a>
+<a class="l" href="https://github.com/jazjv04/website_escuela_olp" target="_blank" rel="noopener"><span lang="es">Código</span><span lang="en">Code</span></a></p>
+</div>
+<div><div class="ph" role="img" aria-label="Pendiente: captura del sitio de la escuela"><span lang="es">Pendiente: captura real del sitio publicado.<br>Guárdala como <b>img/escuela-home.webp</b> y reemplaza este bloque.</span><span lang="en">To do: real screenshot of the live site.<br>Save it as <b>img/escuela-home.webp</b> and replace this block.</span></div></div>
+</div>
+<ol class="flow w" style="padding:0;margin-top:34px">
+<li><b><span lang="es">Diseño</span><span lang="en">Design</span></b><br><span lang="es">Experiencia y pantallas en Figma.</span><span lang="en">Experience and screens in Figma.</span></li>
+<li><b><span lang="es">Traducción</span><span lang="en">Translation</span></b><br><span lang="es">El prototipo pasa a una interfaz web.</span><span lang="en">The prototype becomes a web interface.</span></li>
+<li><b><span lang="es">Componentes</span><span lang="en">Components</span></b><br><span lang="es">Header, footer y páginas modulares.</span><span lang="en">Modular header, footer and pages.</span></li>
+<li><b><span lang="es">Publicación</span><span lang="en">Launch</span></b><br><span lang="es">Sitio responsive en GitHub Pages.</span><span lang="en">Responsive site on GitHub Pages.</span></li>
+</ol>
+</div></section>
+
+<section id="proyectos" style="padding-top:0"><div class="w">
+<p class="lab">03 / <span lang="es">Proyectos</span><span lang="en">Projects</span></p><h2><span lang="es">Más proyectos</span><span lang="en">More projects</span></h2>
+
+<article class="proj"><div class="m"><video src="video/alegator.mp4" poster="img/alegator-home_page_examples.webp" controls muted playsinline preload="none" aria-label="Demo de Alegator"></video>
+<div class="row"><img src="img/alegator-login_examples.webp" alt="Inicio de sesión de Alegator" loading="lazy"><img src="img/alegator-profile.webp" alt="Perfil en Alegator" loading="lazy"></div></div>
+<div><h3>Alegator</h3><ul class="chips"><li>Next.js</li><li>Tailwind</li><li>TypeScript</li><li>CSS</li><li>Figma</li></ul>
+<p><span lang="es">Plataforma web para administrar torneos de debate. Proyecto universitario en equipo, con un sistema de diseño en Figma de componentes reutilizables.</span><span lang="en">Web platform for managing debate tournaments. A university team project, with a Figma design system of reusable components.</span></p>
+<a href="https://github.com/AlegatorHQ" target="_blank" rel="noopener">GitHub</a></div></article>
+
+<article class="proj"><div class="m"><video src="video/ecom.mp4" poster="img/ecom-products.webp" controls muted playsinline preload="none" aria-label="Demo de E-Tech"></video>
+<div class="row"><img src="img/ecom-product.webp" alt="Detalle de producto en E-Tech" loading="lazy"><img src="img/ecom-login.webp" alt="Inicio de sesión en E-Tech" loading="lazy"></div></div>
+<div><h3>E-commerce (E-Tech)</h3><ul class="chips"><li>TypeScript</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>MySQL</li><li>Git</li><li>Figma</li></ul>
+<p><span lang="es">Tienda web académica. Prototipos de alta fidelidad centrados en el proceso de compra; navegación por categorías, detalle de producto y carrito. Pruebas de usabilidad dentro del entorno académico.</span><span lang="en">Academic web store. High-fidelity prototypes focused on the purchase flow; category navigation, product detail and cart. Usability testing within the academic setting.</span></p>
+<a href="https://github.com/ECommerceProject" target="_blank" rel="noopener">GitHub</a></div></article>
+
+<article class="proj"><div class="m"><img src="img/blog-home_page_lightmode.webp" alt="Inicio de ChobekaBlog en modo claro" loading="lazy">
+<div class="row"><img src="img/blog-home_page_darkmode.webp" alt="Inicio de ChobekaBlog en modo oscuro" loading="lazy"><img src="img/blog-profile_page_lightmode.webp" alt="Perfil de ChobekaBlog" loading="lazy"></div></div>
+<div><h3>ChobekaBlog</h3><ul class="chips"><li>Next.js</li><li>Tailwind</li><li>TypeScript</li><li>HTML</li><li>CSS</li><li>Figma</li></ul>
+<p><span lang="es">Blog con modo claro y oscuro. Colaboré en wireframes y prototipos en Figma y traduje los diseños a CSS adaptable a móvil.</span><span lang="en">Blog with light and dark modes. I collaborated on wireframes and Figma prototypes and translated the designs into mobile-friendly CSS.</span></p>
+<a href="https://github.com/chobeka-blog" target="_blank" rel="noopener">GitHub</a></div></article>
+
+<h3 style="margin:48px 0 18px"><span lang="es">Otros trabajos</span><span lang="en">Other work</span></h3>
+<div class="more">
+<article><img src="img/jam-homepage.webp" alt="Inicio de la tienda Conservas del Patio" loading="lazy"><h3 style="margin-top:12px">Conservas del Patio</h3><p style="color:var(--mute);margin:4px 0 0"><span lang="es">Página de venta online. Pendiente: describir tu rol y tecnologías.</span><span lang="en">Online store page. To do: describe your role and technologies.</span></p></article>
+<article><img src="img/cafe-homepage.webp" alt="Inicio del sitio Cafetalando" loading="lazy"><h3 style="margin-top:12px">Cafetalando</h3><p style="color:var(--mute);margin:4px 0 0"><span lang="es">Página de venta online de café. Pendiente: describir tu rol y tecnologías.</span><span lang="en">Online coffee store page. To do: describe your role and technologies.</span></p></article>
+</div>
+</div></section>
+
+<section id="trayectoria" style="padding-top:0"><div class="w">
+<p class="lab">04 / <span lang="es">Trayectoria</span><span lang="en">Background</span></p><h2><span lang="es">Trayectoria</span><span lang="en">Background</span></h2>
+<div class="tl"><div>
+<h3>UI/UX Designer · Fundación Ayudinga</h3><p><span lang="es">Remoto · ago 2025 – presente. Prototipos de alta fidelidad con foco en accesibilidad, componentes reutilizables y un sistema de diseño coherente.</span><span lang="en">Remote · Aug 2025 – present. High-fidelity prototypes focused on accessibility, reusable components and a consistent design system.</span></p>
+<h3>Community Manager · AIESEC Panamá</h3><p><span lang="es">Híbrido · ene 2025 – presente. Contenido para redes internas y calendario editorial.</span><span lang="en">Hybrid · Jan 2025 – present. Internal-network content and editorial calendar.</span></p></div>
+<div>
+<h3><span lang="es">Licenciatura en Desarrollo de Software</span><span lang="en">B.S. in Software Development</span></h3><p>Universidad Tecnológica de Panamá · <span lang="es">desde marzo 2023</span><span lang="en">since March 2023</span></p>
+<h3>Project Management &amp; Agile</h3><p>Dell Volunteers · 2024</p>
+<h3><span lang="es">Comunidad</span><span lang="en">Community</span></h3><p><span lang="es">Coordinadora Regional, IEEE Computer Society (2026). Hackathon Copa 2025 y equipo organizador de TechX 2025. Clases de informática comunitarias.</span><span lang="en">Regional Coordinator, IEEE Computer Society (2026). Hackathon Copa 2025 and TechX 2025 organizing team. Community computer classes.</span></p></div></div>
+</div></section>
+</main>
+
+<section id="contacto" style="padding-bottom:60px"><div class="w ct"><div>
+<p class="lab">05 / <span lang="es">Contacto</span><span lang="en">Contact</span></p>
+<h2><span lang="es">¿Tienes un diseño que necesita ser sitio web?</span><span lang="en">Have a design that needs to become a website?</span></h2>
+<div class="mail"><a href="mailto:jaz04.fuentes@gmail.com">jaz04.fuentes@gmail.com</a><button class="lt" id="cp" type="button"><span lang="es">Copiar correo</span><span lang="en">Copy email</span></button><span id="cpm" role="status"></span></div>
+<div class="box"><b><span lang="es">Disponibilidad</span><span lang="en">Availability</span></b><ul><li><span lang="es">Zona horaria: UTC-5 (Panamá)</span><span lang="en">Timezone: UTC-5 (Panama)</span></li><li><span lang="es">Colaboraciones frontend, de Figma a código, y diseño UI/UX</span><span lang="en">Frontend collaboration, Figma to code, and UI/UX design</span></li></ul></div></div>
+<form id="f"><label><span lang="es">Nombre</span><span lang="en">Name</span><input name="n" required autocomplete="name"></label>
+<label><span lang="es">Tu correo</span><span lang="en">Your email</span><input name="e" type="email" required autocomplete="email"></label>
+<label><span lang="es">Mensaje</span><span lang="en">Message</span><textarea name="m" rows="5" required></textarea></label>
+<div><button class="btn" style="border:0;cursor:pointer;font:600 1rem var(--b)"><span lang="es">Abrir en mi correo</span><span lang="en">Open in my email app</span></button></div></form>
+</div></section>
+<footer><div class="w"><div class="fg">
+<div><h3 style="font-size:1.4rem">Jazmín Fuentes</h3><p><span lang="es">Frontend Developer &amp; UI/UX Designer en Panamá. Del diseño en Figma a la interfaz publicada.</span><span lang="en">Frontend Developer &amp; UI/UX Designer in Panama. From Figma design to published interface.</span></p></div>
+<div><h3><span lang="es">Enlaces</span><span lang="en">Quick links</span></h3><ul><li><a href="#sobre-mi"><span lang="es">Sobre mí</span><span lang="en">About</span></a></li><li><a href="#escuela"><span lang="es">Caso principal</span><span lang="en">Main case</span></a></li><li><a href="#proyectos"><span lang="es">Proyectos</span><span lang="en">Projects</span></a></li><li><a href="#trayectoria"><span lang="es">Trayectoria</span><span lang="en">Background</span></a></li><li><a id="cvf" href="cv/CV_JazminFuentes_es.pdf" download><span lang="es">Descargar CV</span><span lang="en">Download CV</span></a></li></ul></div>
+<div><h3><span lang="es">Conecta</span><span lang="en">Connect</span></h3><ul><li><a href="mailto:jaz04.fuentes@gmail.com">jaz04.fuentes@gmail.com</a></li><li><a href="https://github.com/jazjv04" target="_blank" rel="noopener">github.com/jazjv04</a></li><li><a href="https://www.linkedin.com/in/jazmin-f" target="_blank" rel="noopener">linkedin.com/in/jazmin-f</a></li></ul></div>
+</div><div class="fb"><span>© 2026 Jazmín Fuentes. <span lang="es">Todos los derechos reservados.</span><span lang="en">All rights reserved.</span></span><span>Panamá</span></div></div></footer>
+<script>
+const h=document.documentElement,b=document.getElementById('lt');
+let l=(navigator.language||'es').startsWith('en')?'en':'es';
+try{l=localStorage.getItem('lang')||l}catch(e){}
+function set(x){h.lang=x;document.querySelectorAll('#cvh,#cvf').forEach(a=>a.href='cv/CV_JazminFuentes_'+x+'.pdf');b.textContent=x==='es'?'EN':'ES';try{localStorage.setItem('lang',x)}catch(e){}}
+set(l);b.onclick=()=>set(h.lang==='es'?'en':'es');
+const E='jaz04.fuentes@gmail.com';
+document.getElementById('cp').onclick=async()=>{const m=document.getElementById('cpm');try{await navigator.clipboard.writeText(E);m.textContent=h.lang==='es'?'Copiado':'Copied'}catch(e){m.textContent=E}};
+document.getElementById('f').onsubmit=e=>{e.preventDefault();const d=new FormData(e.target);
+location.href='mailto:'+E+'?subject='+encodeURIComponent((h.lang==='es'?'Contacto desde tu portafolio: ':'Portfolio contact: ')+d.get('n'))+'&body='+encodeURIComponent(d.get('m')+'\n\n'+d.get('n')+' <'+d.get('e')+'>')};
+</script>
+</body></html>
