@@ -1,6 +1,6 @@
-# Jazmín Fuentes | Frontend Developer & UI/UX Designer
+# Jazmin Fuentes | Frontend Developer & UI/UX Designer
 
-Hi! I'm Jazmín Fuentes, a Software Development student and Frontend Developer with a passion for UI/UX design. I enjoy turning ideas and Figma prototypes into responsive, accessible, and visually engaging web experiences.
+Hi! I'm Jazmin Fuentes, a Software Development student and Frontend Developer with a passion for UI/UX design. I enjoy turning ideas and Figma prototypes into responsive, accessible, and visually engaging web experiences.
 
 My work combines frontend development, user-centered design, and attention to detail to create digital products that are both functional and intuitive.
 
@@ -47,11 +47,11 @@ An institutional website project for which I designed the interface in Figma and
 - Implementing layouts and visual components.
 - Frontend development and responsive behavior, where implemented.
 
-**Live Demo:** [Add website URL]
+**Live Demo:** [Escuela-Demo](https://jazjv04.github.io/website_escuela_olp/)
 
-**Figma Prototype:** [Add Figma URL]
+**Figma Prototype:** [Escuela-Figma](https://www.figma.com/design/HVAYWqLQcKYenOK7M6jEIe/OLP--Web?node-id=0-1&t=mLqVG5rJi78orlnx-1)
 
-**Source Code:** [Add repository URL]
+**Source Code:** [Escuela-Repositorio](https://github.com/jazjv04/website_escuela_olp)
 
 ### 02. Alegator — Debate Tournament Management Platform
 
@@ -107,8 +107,9 @@ I'm open to discussing frontend development opportunities, UI/UX collaborations,
 
 - **Email:** [jaz04.fuentes@gmail.com](mailto:jaz04.fuentes@gmail.com)
 - **GitHub:** [github.com/jazjv04](https://github.com/jazjv04)
+- **Linkedin:** [Jazmin Fuentes](www.linkedin.com/in/jazmin-f)
 - **Location:** Panama
 
 ---
 
-*Designed with curiosity, built with code, and driven by thoughtful user experiences.*
+*Designed with curiosity, built with code and driven by thoughtful user experiences.*
