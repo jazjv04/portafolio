@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Jazmín Fuentes — Frontend Developer & UI/UX Designer</title>
+<title>Jazmin Fuentes — Frontend Developer & UI/UX Designer</title>
 <meta name="description" content="Diseño en Figma e implementación frontend. Frontend Developer & UI/UX Designer en Panamá.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -33,9 +33,9 @@ section{padding:80px 0}
 @media(prefers-color-scheme:dark){.btn{color:#121022}}
 .btn.o{background:none;color:var(--ink);border:1.5px solid var(--ink)}
 /* signature: figma-style selected frame */
-.frame{position:relative;border:2px solid var(--violet);border-radius:4px;padding:0;background:var(--card);animation:in .9s cubic-bezier(.2,.8,.2,1) both}
+.frame{position:relative;aspect-ratio:16/10;overflow:hidden;border:2px solid var(--violet);border-radius:4px;padding:0;background:var(--card);animation:in .9s cubic-bezier(.2,.8,.2,1) both}
 @keyframes in{from{opacity:0;transform:translateY(14px) scale(.98)}}
-.frame img{display:block;width:100%;height:auto}
+.frame img{display:block;width:100%;height:100%;object-fit:cover}
 .frame i{position:absolute;width:10px;height:10px;background:#fff;border:2px solid var(--violet)}
 .frame i:nth-of-type(1){left:-7px;top:-7px}.frame i:nth-of-type(2){right:-7px;top:-7px}.frame i:nth-of-type(3){left:-7px;bottom:-7px}.frame i:nth-of-type(4){right:-7px;bottom:-7px}
 .tag{position:absolute;font:600 .75rem var(--b);padding:3px 9px;border-radius:0 8px 8px 8px;color:#fff;white-space:nowrap}
@@ -48,7 +48,7 @@ section{padding:80px 0}
 .case{background:var(--ink);color:var(--paper);border-radius:22px;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:40px}
 @media(prefers-color-scheme:dark){.case{background:var(--card);color:var(--ink)}}
 .case .chips li{background:rgba(255,255,255,.14);color:inherit}
-.ph{aspect-ratio:16/10;border:2px dashed var(--violet);border-radius:10px;display:grid;place-items:center;text-align:center;padding:20px;font-size:.92rem;opacity:.9}
+.ph{aspect-ratio:16/10;border:2px dashed var(--violet);border-radius:10px;display:block;width:100%;height:auto;object-fit:cover;opacity:1}
 .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:30px 0 0;padding:0;list-style:none;counter-reset:s}
 .flow li{counter-increment:s;padding:16px 16px 0 0;border-top:2px solid var(--violet);font-size:.95rem}
 .flow li::before{content:counter(s);display:block;font:700 1.5rem var(--d);color:var(--violet)}
@@ -66,6 +66,7 @@ footer{padding:80px 0 40px;border-top:1px solid var(--line)}
 footer .big{font:800 clamp(1.8rem,5vw,3.6rem) var(--d);letter-spacing:-.02em;word-break:break-word}
 footer small{display:block;margin-top:40px;color:var(--mute)}
 @media(max-width:820px){nav{display:none}.hero,.case,.proj,.tl,.more,.cap{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.proj:nth-child(even) .m{order:0}.case{padding:26px}.hero{padding-top:44px}}
+@media(max-width:600px){.w{padding-left:26px;padding-right:26px}.flow.w{padding-left:0;padding-right:0}header .w{gap:8px;padding-left:14px;padding-right:14px}.nb{font-size:.72rem;padding:6px 9px;white-space:nowrap;margin-right:0}.lt{padding:5px 9px}}
 .lab{font:600 .9rem var(--b);color:var(--violet);margin:0 0 10px}
 .badge{display:inline-flex;align-items:center;gap:8px;font-size:.88rem;font-weight:600;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:5px 14px;margin-bottom:22px}
 .badge::before{content:"";width:9px;height:9px;border-radius:50%;background:#1faa78;box-shadow:0 0 0 4px rgba(31,170,120,.2)}
@@ -84,7 +85,7 @@ input,textarea{font:inherit;color:var(--ink);background:var(--card);border:1px s
 </style>
 </head>
 <body>
-<header><div class="w"><a class="logo" href="#top">Jazmín Fuentes</a>
+<header><div class="w"><a class="logo" href="#top">Jazmin Fuentes</a>
 <nav><a href="#sobre-mi"><span lang="es">Sobre mí</span><span lang="en">About</span></a><a href="#escuela"><span lang="es">Caso principal</span><span lang="en">Main case</span></a><a href="#proyectos"><span lang="es">Proyectos</span><span lang="en">Projects</span></a><a href="#trayectoria"><span lang="es">Trayectoria</span><span lang="en">Background</span></a><a href="#contacto"><span lang="es">Contacto</span><span lang="en">Contact</span></a></nav>
 <a class="btn nb" id="cvh" href="cv/CV_JazminFuentes_es.pdf" download><span lang="es">Descargar CV</span><span lang="en">Download CV</span></a>
 <button class="lt" id="lt" aria-label="Cambiar idioma / Switch language">EN</button></div></header>
@@ -93,10 +94,10 @@ input,textarea{font:inherit;color:var(--ink);background:var(--card);border:1px s
 <div class="w hero">
 <div>
 <span class="badge"><span lang="es">Disponible para colaborar</span><span lang="en">Available to collaborate</span></span><br><h1><span lang="es">Del frame de Figma a la interfaz en el navegador.</span><span lang="en">From the Figma frame to the interface in the browser.</span></h1>
-<p><span lang="es">Soy Jazmín, diseñadora UI/UX y desarrolladora frontend en Panamá. Diseño la experiencia y la programo, así lo que se diseña es lo que se publica.</span><span lang="en">I'm Jazmín, a UI/UX designer and frontend developer in Panama. I design the experience and build it, so what gets designed is what ships.</span></p>
+<p><span lang="es">Soy Jazmin, diseñadora UI/UX y desarrolladora frontend en Panamá. Diseño la experiencia y la programo, así lo que se diseña es lo que se publica.</span><span lang="en">I'm Jazmin, a UI/UX designer and frontend developer in Panama. I design the experience and build it, so what gets designed is what ships.</span></p>
 <a class="btn" href="#escuela"><span lang="es">Ver caso principal</span><span lang="en">See main case</span></a><a class="btn o" href="#contacto"><span lang="es">Escríbeme</span><span lang="en">Get in touch</span></a>
 </div>
-<div class="frame" style="margin:30px 8px"><i></i><i></i><i></i><i></i><span class="tag t1">Jazmín · UI/UX</span><span class="tag t2">Jazmín · Frontend</span>
+<div class="frame" style="margin:30px 8px"><i></i><i></i><i></i><i></i><span class="tag t1">Jazmin · UI/UX</span><span class="tag t2">Jazmin · Frontend</span>
 <img src="img/alegator-home_page_examples.webp" alt="Pantalla de inicio de Alegator, plataforma de torneos de debate" width="1440" height="1024"></div>
 </div>
 
@@ -116,7 +117,7 @@ input,textarea{font:inherit;color:var(--ink);background:var(--card);border:1px s
 <p class="lab">02 / <span lang="es">Caso principal</span><span lang="en">Main case</span></p>
 <div class="case">
 <div>
-<h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem)"><span lang="es">Sitio web de la Escuela Primaria Octavio López Pascal</span><span lang="en">Website for Octavio López Pascal Primary School</span></h2>
+<h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem)"><span lang="es">Sitio web una la Escuela Primaria Local</span><span lang="en">Website for a LocalPrimary School</span></h2>
 <p><span lang="es">Diseñé el prototipo en Figma y programé el frontend del sitio de la escuela. Es el caso donde se ve todo el recorrido: de la jerarquía de pantallas al sitio publicado.</span><span lang="en">I designed the Figma prototype and built the school website's frontend. This case shows the full path, from screen hierarchy to the published site.</span></p>
 <ul class="chips"><li>Figma</li><li>HTML5</li><li>Tailwind CSS</li><li>JavaScript</li><li>Font Awesome</li></ul>
 <p><strong><span lang="es">Rol:</span><span lang="en">Role:</span></strong> <span lang="es">diseño UI/UX en Figma y desarrollo frontend.</span><span lang="en">UI/UX design in Figma and frontend development.</span></p>
@@ -124,8 +125,12 @@ input,textarea{font:inherit;color:var(--ink);background:var(--card);border:1px s
 <a class="l" href="https://www.figma.com/design/HVAYWqLQcKYenOK7M6jEIe/OLP--Web?node-id=0-1&t=mLqVG5rJi78orlnx-1" target="_blank" rel="noopener"><span lang="es">Prototipo en Figma</span><span lang="en">Figma prototype</span></a>
 <a class="l" href="https://github.com/jazjv04/website_escuela_olp" target="_blank" rel="noopener"><span lang="es">Código</span><span lang="en">Code</span></a></p>
 </div>
-<div><div class="ph" role="img" aria-label="Pendiente: captura del sitio de la escuela"><span lang="es">Pendiente: captura real del sitio publicado.<br>Guárdala como <b>img/escuela-home.webp</b> y reemplaza este bloque.</span><span lang="en">To do: real screenshot of the live site.<br>Save it as <b>img/escuela-home.webp</b> and replace this block.</span></div></div>
+
+
+<div class="frame">
+<img src="img/escuela-home.webp" alt="Página de inicio del sitio web de la escuela primaria"></div>
 </div>
+
 <ol class="flow w" style="padding:0;margin-top:34px">
 <li><b><span lang="es">Diseño</span><span lang="en">Design</span></b><br><span lang="es">Experiencia y pantallas en Figma.</span><span lang="en">Experience and screens in Figma.</span></li>
 <li><b><span lang="es">Traducción</span><span lang="en">Translation</span></b><br><span lang="es">El prototipo pasa a una interfaz web.</span><span lang="en">The prototype becomes a web interface.</span></li>
@@ -158,7 +163,7 @@ input,textarea{font:inherit;color:var(--ink);background:var(--card);border:1px s
 <h3 style="margin:48px 0 18px"><span lang="es">Otros trabajos</span><span lang="en">Other work</span></h3>
 <div class="more">
 <article><img src="img/jam-homepage.webp" alt="Inicio de la tienda Conservas del Patio" loading="lazy"><h3 style="margin-top:12px">Conservas del Patio</h3><p style="color:var(--mute);margin:4px 0 0"><span lang="es">Página de venta online. Pendiente: describir tu rol y tecnologías.</span><span lang="en">Online store page. To do: describe your role and technologies.</span></p></article>
-<article><img src="img/cafe-homepage.webp" alt="Inicio del sitio Cafetalando" loading="lazy"><h3 style="margin-top:12px">Cafetalando</h3><p style="color:var(--mute);margin:4px 0 0"><span lang="es">Página de venta online de café. Pendiente: describir tu rol y tecnologías.</span><span lang="en">Online coffee store page. To do: describe your role and technologies.</span></p></article>
+<article><img src="img/cafe-homepage.webp" alt="Inicio del sitio Cafetalando" loading="lazy"><h3 style="margin-top:12px">Cafeteando</h3><p style="color:var(--mute);margin:4px 0 0"><span lang="es">Página de venta online de café. Pendiente: describir tu rol y tecnologías.</span><span lang="en">Online coffee store page. To do: describe your role and technologies.</span></p></article>
 </div>
 </div></section>
 
@@ -185,10 +190,10 @@ input,textarea{font:inherit;color:var(--ink);background:var(--card);border:1px s
 <div><button class="btn" style="border:0;cursor:pointer;font:600 1rem var(--b)"><span lang="es">Abrir en mi correo</span><span lang="en">Open in my email app</span></button></div></form>
 </div></section>
 <footer><div class="w"><div class="fg">
-<div><h3 style="font-size:1.4rem">Jazmín Fuentes</h3><p><span lang="es">Frontend Developer &amp; UI/UX Designer en Panamá. Del diseño en Figma a la interfaz publicada.</span><span lang="en">Frontend Developer &amp; UI/UX Designer in Panama. From Figma design to published interface.</span></p></div>
+<div><h3 style="font-size:1.4rem">Jazmin Fuentes</h3><p><span lang="es">Frontend Developer &amp; UI/UX Designer en Panamá. Del diseño en Figma a la interfaz publicada.</span><span lang="en">Frontend Developer &amp; UI/UX Designer in Panama. From Figma design to published interface.</span></p></div>
 <div><h3><span lang="es">Enlaces</span><span lang="en">Quick links</span></h3><ul><li><a href="#sobre-mi"><span lang="es">Sobre mí</span><span lang="en">About</span></a></li><li><a href="#escuela"><span lang="es">Caso principal</span><span lang="en">Main case</span></a></li><li><a href="#proyectos"><span lang="es">Proyectos</span><span lang="en">Projects</span></a></li><li><a href="#trayectoria"><span lang="es">Trayectoria</span><span lang="en">Background</span></a></li><li><a id="cvf" href="cv/CV_JazminFuentes_es.pdf" download><span lang="es">Descargar CV</span><span lang="en">Download CV</span></a></li></ul></div>
-<div><h3><span lang="es">Conecta</span><span lang="en">Connect</span></h3><ul><li><a href="mailto:jaz04.fuentes@gmail.com">jaz04.fuentes@gmail.com</a></li><li><a href="https://github.com/jazjv04" target="_blank" rel="noopener">github.com/jazjv04</a></li><li><a href="https://www.linkedin.com/in/jazmin-f" target="_blank" rel="noopener">linkedin.com/in/jazmin-f</a></li></ul></div>
-</div><div class="fb"><span>© 2026 Jazmín Fuentes. <span lang="es">Todos los derechos reservados.</span><span lang="en">All rights reserved.</span></span><span>Panamá</span></div></div></footer>
+<div><h3><span lang="es">Conectemos</span><span lang="en">Connect</span></h3><ul><li><a href="mailto:jaz04.fuentes@gmail.com">Email</a></li><li><a href="https://github.com/jazjv04" target="_blank" rel="noopener">GitHub</a></li><li><a href="https://www.linkedin.com/in/jazmin-f" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+</div><div class="fb"><span>© 2026 Jazmin Fuentes. <span lang="es">Todos los derechos reservados.</span><span lang="en">All rights reserved.</span></span ><span >Panamá</span ></div ></div ></footer>
 <script>
 const h=document.documentElement,b=document.getElementById('lt');
 let l=(navigator.language||'es').startsWith('en')?'en':'es';
